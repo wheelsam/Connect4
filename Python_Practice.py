@@ -15,9 +15,7 @@ class Dog:
 
     def setName(self, name):
         self._name = name
-        
+
     def __str__(self):
         return "dog:\nname: " + self._name + "/nage: " + str(self._age)
-    #hi
-    
-           
+    #what up
