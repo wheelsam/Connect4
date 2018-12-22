@@ -18,4 +18,11 @@ class Dog:
 
     def __str__(self):
         return "dog:\nname: " + self._name + "/nage: " + str(self._age)
+<<<<<<< HEAD
     #what up
+=======
+    #helllo theeerrreeee
+    
+    
+           
+>>>>>>> a554158cd82e901f7eafedb4560c591e056383fe
