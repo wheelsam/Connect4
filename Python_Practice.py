@@ -5,20 +5,26 @@ class Application(tk.Frame):
         super().__init__(master)
         self.master = master
         self.pack()
-        self.create_widgets()
+        self.create_board()
 
-    def create_widgets(self):
-        self.hi_there = tk.Button(self)
-        self.hi_there["text"] = "Hello World\n(click me)"
-        self.hi_there["command"] = self.say_hi
-        self.hi_there.pack(side="top")
+    def create_board(self):
+        create_buttons()
+
+    def create_buttons(self):
+        buttons = []
+
+        for x in range(7):
+            buttons[x] = tk.Button(self)
 
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
 
-    def say_hi(self):
-        print("hi there, everyone!")
+    def player_1(self):
+        print("Player 1 went")
+
+    def player_2(self):
+        print("Player 2 went")
 
 root = tk.Tk()
 app = Application(master=root)
