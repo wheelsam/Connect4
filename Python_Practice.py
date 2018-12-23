@@ -29,3 +29,13 @@ class Application(tk.Frame):
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
+<<<<<<< HEAD
+=======
+
+  
+  
+  
+  
+  
+
+>>>>>>> 7b52302901a393b519c8cdaf4267666ef90156c8
