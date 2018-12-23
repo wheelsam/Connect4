@@ -15,10 +15,7 @@ class Application(tk.Frame):
 
         for x in range(7):
             buttons.append(tk.Button(self, text="Put Piece Here"))
-
-        self.quit = tk.Button(self, text="QUIT", fg="red",
-                              command=self.master.destroy)
-        self.quit.pack(side="bottom")
+            buttons[x].pack(side="left")
 
     def player_1(self):
         print("Player 1 went")
