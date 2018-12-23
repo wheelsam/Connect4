@@ -11,28 +11,23 @@ class Application(tk.Frame):
         self.create_buttons()
 
     def create_buttons(self):
+        global turn_number = 0
         buttons = []
 
         for x in range(7):
-<<<<<<< HEAD
-            buttons.append(tk.Button(self, text="Put Piece Here"))
+            buttons.append(tk.Button(self, text="Put Piece Here",
+                                     command=turn))
             buttons[x].pack(side="left")
-=======
-            buttons.append(tk.Button(self))
 
-        self.quit = tk.Button(self, text="QUIT", fg="red",
-                              command=self.master.destroy)
-        self.quit.pack(side="bottom")
->>>>>>> 056a56d1640e68494a53935b4ba1177e80ee8ed2
-
-    def player_1(self):
-        print("Player 1 went")
-
-    def player_2(self):
-        print("Player 2 went")
+    def turn(self):
+        turn_number += 1
+        if turn_number % 2 == 0:
+            print("Player 1 went")
+        else:
+            print("Player 2 went")
 
 root = tk.Tk()
 root.title("Connect 4")
-root.geometry('350x200')
+root.geometry('800x600')
 app = Application(master=root)
 app.mainloop()
