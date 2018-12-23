@@ -1,7 +1,6 @@
 import tkinter as tk
 
 class Application(tk.Frame):
-<<<<<<< HEAD
     def __init__(self, master=None):
         super().__init__(master)
         self.master = master
@@ -9,7 +8,7 @@ class Application(tk.Frame):
         self.create_board()
 
     def create_board(self):
-        create_buttons()
+        self.create_buttons()
 
     def create_buttons(self):
         buttons = []
@@ -30,12 +29,3 @@ class Application(tk.Frame):
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
-=======
-  
-  
-  
-  
-  
-#connect 4 is 6x7
-#
->>>>>>> d2df5afece344bf5ec19b1abb104a15033f3fb2f
