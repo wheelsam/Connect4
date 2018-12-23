@@ -11,12 +11,10 @@ class Application(tk.Frame):
         self.create_buttons()
 
     def create_buttons(self):
-        global turn_number
-        turn_number = 0
         buttons = []
 
-
         def turn():
+            global turn_number
             turn_number += 1
             if turn_number % 2 == 0:
                 print("Player 1 went")
@@ -28,7 +26,7 @@ class Application(tk.Frame):
                                      command=turn))
             buttons[x].pack(side="left")
 
-
+turn_number = 0
 root = tk.Tk()
 root.title("Connect 4")
 root.geometry('800x600')
