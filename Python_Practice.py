@@ -15,6 +15,7 @@ class Application(tk.Frame):
         buttons = []
 
         for x in range(7):
+<<<<<<< HEAD
             buttons.append(tk.Button(self, text="Put Piece Here",
                                      command=turn))
             buttons[x].pack(side="left")
@@ -25,6 +26,16 @@ class Application(tk.Frame):
             print("Player 1 went")
         else:
             print("Player 2 went")
+=======
+            buttons.append(tk.Button(self, text="Put Piece Here"))
+            buttons[x].pack(side="left")
+
+    def player_1(self):
+        print("Player 1 went")
+
+    def player_2(self):
+        print("Player 2 went")
+>>>>>>> a481e4dcae437476a6b89f43fea886c1b1df380d
 
 root = tk.Tk()
 root.title("Connect 4")
