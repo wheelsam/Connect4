@@ -25,6 +25,6 @@ class Application(tk.Frame):
 
 root = tk.Tk()
 root.title("Connect 4")
-root.geometry('350x200')
+root.geometry('650x600')
 app = Application(master=root)
 app.mainloop()
