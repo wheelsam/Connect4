@@ -13,6 +13,7 @@ class Application(tk.Frame):
     def create_buttons(self):
         buttons = []
 
+        #Keeps track of whos turn it is and does stuff
         def turn():
             global turn_number
             turn_number += 1
@@ -20,13 +21,26 @@ class Application(tk.Frame):
                 print("Player 1 went")
             else:
                 print("Player 2 went")
+            isGameWon()
 
+        #Creates a row of 7 buttons that do the turn method when clicked
         for x in range(7):
             buttons.append(tk.Button(self, text="Put Piece Here",
                                      command=turn))
             buttons[x].pack(side="left")
 
+    def isGameWon():
+
+#Global variables
+
+#Keeps track of where pieces are, 0 means none, 1 means player 1
+#and 2 means player 2
+board_layout = [][]
+for x in range(7):
+    buttons.append()
+
 turn_number = 0
+
 root = tk.Tk()
 root.title("Connect 4")
 root.geometry('800x600')
