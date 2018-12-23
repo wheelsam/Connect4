@@ -14,7 +14,7 @@ class Application(tk.Frame):
         buttons = []
 
         for x in range(7):
-            buttons[x] = tk.Button(self)
+            buttons.append(tk.Button(self))
 
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
