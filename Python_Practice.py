@@ -14,7 +14,7 @@ class Application(tk.Frame):
         buttons = []
 
         for x in range(7):
-            buttons.append(tk.Button(self, text="Put Piece Here"))
+            buttons.append(tk.Button(self))
 
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
@@ -27,5 +27,7 @@ class Application(tk.Frame):
         print("Player 2 went")
 
 root = tk.Tk()
+root.title("Connect 4")
+root.geometry('350x200')
 app = Application(master=root)
 app.mainloop()
