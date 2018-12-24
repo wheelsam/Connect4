@@ -4,55 +4,16 @@ import tkinter.ttk as ttk
 mGui = Tk()
 
 mGui.geometry("630x600")
-mGui.configure(background="Gray")
+mGui.configure(background="Green")
 
-mGui.columnconfigure(0, weight=1)
-mGui.rowconfigure(0, weight=1)
 
-FMas = Frame(mGui, bg="Gray")
-FMas.grid(sticky=(N,E,S,W))
-
-FMas.columnconfigure(0, weight=1)
-
-L1 = Label(FMas, text="Frame 1 Contents")
-L1.grid(row=0, column=0, pady=5, sticky=(N,W))
-
-F1 = Frame(FMas, bg="Green", bd=2, relief=GROOVE)
-F1.grid(row=1, column=0, sticky=(N,W))
-
-ChkBox1=IntVar()
-CB1 = Checkbutton(F1, text="StartCheckBox", variable=ChkBox1)
-CB1.grid(row=0,column=0,padx=2)
-
-L2 = Label(FMas, text="Frame 2 Contents")
-L2.grid(row=2, column=0, pady=5, sticky=(N,W))
-
-Can1 = Canvas(FMas, bg="Yellow")
-Can1.grid(row=3, column=0, sticky=(N,W))
-
-F2 = Frame(Can1, bg="Blue", bd=2, relief=GROOVE)
-F2.grid(row=0, column=0, sticky=(N,W))
-
-rows = 10
+rows = 7
 for i in range(1,rows):
-    for j in range(1,6):
-        button = Button(F2, padx=7, pady=7, text="[%d,%d]" % (i,j))
-        button.grid(row=i, column=j, sticky='news')
+    for j in range(1,8):
+        entry = Entry(mGui, width=5)
+        entry.grid(row=i, column=j)
 
-vsbar = Scrollbar(FMas, orient="vertical", command=Can1.yview)
-vsbar.grid(row=3, column=1)
 
-Can1.configure(yscrollcommand=vsbar.set, scrollregion=Can1.bbox("all"))
-
-L3 = Label(FMas, text="Frame 3 Contents")
-L3.grid(row=4, column=0, pady=5, sticky=(N,W))
-
-F3 = Frame(FMas, bg="Red", bd=2, relief=GROOVE)
-F3.grid(row=5, column=0, sticky=(N,W))
-
-ChkBox2=IntVar()
-CB2 = Checkbutton(F3, text="EndCheckBox", variable=ChkBox2)
-CB2.grid(row=0,column=0,padx=2)
 
 mGui.mainloop()
 sys.exit()
