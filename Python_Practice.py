@@ -5,7 +5,7 @@ turn_number = 1
 
 class Application(Frame):
 
-    def __init__(self, master=None):
+    def __init__(self, master = None):
         super().__init__(master)
         self.master = master
         self.pack()
@@ -13,19 +13,19 @@ class Application(Frame):
 
     def create_board(self):
         self.create_buttons()
-        grid_layout=[]
+        grid_layout = []
 
 
 
-        Lbl = Label(self, bg="Green",text ="C4 demo")
-        Lbl.grid(row=1,column=3)
+        Lbl = Label(self, bg = "Green", text = "C4 demo")
+        Lbl.grid(row = 1, column = 3)
 
         for i in range(1,7):
             for j in range(7):
-                grid_layout = Label(self, text="""
+                grid_layout = Label(self, text = """
 
                             """, bg="Gray",relief="groove")
-                grid_layout.grid(row=i+2, column=j)
+                grid_layout.grid(row = i + 2, column = j)
 
     def create_buttons(self):
         buttons = []
@@ -35,8 +35,8 @@ class Application(Frame):
         player_turn.grid(row = 15, column = 3)
 
         for x in range(7):
-            buttons.append(Button(self, text = "Go Here",
-                                  command = lambda column=x: self.turn(column, player_text)))
+            buttons.append(Button(self, text = "Go Here", command = lambda
+                                  column = x: self.turn(column, player_text)))
             buttons[x].grid(row = 9, column = x)
 
     #Keeps track of whos turn it is. Puts a number in a column depending on which button is pressed
