@@ -34,7 +34,7 @@ class Application(tk.Frame):
 
         Lbl2 = Label(self,text = "\nPlace a piece\n(use the buttons)")
         Lbl2.grid(row=10,column=3)
-        Lbl3 = Label(self, text = "Player 1\nFckin Go")
+        Lbl3 = Label(self, text = "Player 1\ Go")
         Lbl3.grid(row=15,column=3)
         #Keeps track of whos turn it is and does stuff
         def turn():
