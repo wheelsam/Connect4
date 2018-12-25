@@ -1,7 +1,7 @@
 from tkinter import *
 
 board_layout = [[0 for x in range(7)]for y in range(6)]
-turn_number = 0
+turn_number = 1
 
 class Application(Frame):
 
@@ -46,23 +46,23 @@ class Application(Frame):
         turn_number += 1
         cs = 0
         r = 0
-        player_turn = turn_number % 2
-
-        if player_turn == 0:
-            player_text.set("Player 1\n Go")
-            player_turn = 2
-        else:
-            player_text.set("Player 2\n Go")
-            player_turn = 1
 
         while cs == 0:
             if board_layout[r][column] == 0:
-                board_layout [r][column] = player_turn
+                board_layout [r][column] = turn_number % 2 + 1
                 for y in range(6):
                     print(str(board_layout[y]) + "\n")
                 cs = 1
             else:
+                if r == 5:
+                    turn_number += 1
+                    return
                 r += 1
+
+        if turn_number % 2 == 1:
+            player_text.set("Player 1\n Go")
+        else:
+            player_text.set("Player 2\n Go")
 
         def isGameWon():
             print(1)
